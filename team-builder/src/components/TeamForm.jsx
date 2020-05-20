@@ -1,4 +1,5 @@
 import React from 'react'
+import {StyledButton, StyledForm} from './Styled'
 
 export default function TeamForm(props){
     const {
@@ -8,10 +9,10 @@ export default function TeamForm(props){
     } = props
 
 return (
-    <form onSubmit={onSubmit}>
+    <StyledForm onSubmit={onSubmit}>
         <div>
             <h2>Add a Team Member</h2>
-            <button>Submit</button>
+            <StyledButton>Submit</StyledButton>
         </div>
 
         <div>
@@ -25,8 +26,8 @@ return (
                     value = {values.name}
                     onChange = {onInputChange}
                 />
-            </label>
-            <label>Email:&nbsp;
+            </label><br></br>
+            <label>Email:&nbsp;    
                 <input
                     type ='text'
                     placeholder = 'Type an email'
@@ -35,7 +36,7 @@ return (
                     value = {values.email}
                     onChange = {onInputChange}
                 />
-            </label>
+            </label><br></br>
             <label>Role:&nbsp;
                 <select name='role' value={values.role} onChange = {onInputChange}>
                     <option value =''>Select a Role</option>
@@ -46,7 +47,7 @@ return (
                 </select>
             </label>    
         </div>
-    </form>
+    </StyledForm>
 )
 }
 

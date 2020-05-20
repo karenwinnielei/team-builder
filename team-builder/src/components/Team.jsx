@@ -1,4 +1,5 @@
 import React from 'react'
+import {StyledTeam} from './Styled'
 
 export default function Team(props) {
     const {details} = props
@@ -8,10 +9,10 @@ export default function Team(props) {
     }
 
     return (
-        <div>
+        <StyledTeam>
             <h2>{details.name}</h2>
             <p>Email: {details.email} </p>
             <p>Role: {details.role} </p>
-        </div>
+        </StyledTeam>
     )
 }

@@ -3,6 +3,7 @@ import { v4 as uuid } from 'uuid'
 import '../../src/index.css';
 import Team from './Team'
 import TeamForm from './TeamForm'
+import {Styled} from './Styled'
 
 const initialTeamRoster = [
   {
@@ -45,7 +46,7 @@ export default function App() {
   }
 
   return (
-    <div className="App">
+    <Styled>
       <header>
         <h1>Team</h1>
       </header>
@@ -58,7 +59,7 @@ export default function App() {
           )
         })
       }
-    </div>
+    </Styled>
   );
 }
 
